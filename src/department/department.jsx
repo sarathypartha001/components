@@ -1,5 +1,6 @@
 import React from 'react'
 import "./department.css"
+
 function Department({departmentvalue, children}) {
   return (
     <div>
