@@ -24,7 +24,10 @@ function Company(props){
             onHandleBtnclick(companyName);
         }}>Click Button</button>
         
-        <Department departmentvalue={departmentvalue}>
+        <Department departmentvalue={departmentvalue} 
+        departmentClickvalue={(departmentvalue)=>{
+              onHandleBtnclick(`${companyName} - ${departmentvalue}`);
+        }}>
                  <h5 className="department-name">Departments</h5>
         </Department>
          {/* <button onClick={()=>{buttonClick(companyName)}}>Select</button>  */}

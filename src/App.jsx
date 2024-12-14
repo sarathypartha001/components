@@ -5,16 +5,17 @@ import { useState } from "react";
 
 function App(){
     let [SelectButton, setSelectButton]= useState("Company Details");
+    let [departmentselectBtn, setdepartmentselectBtn] = useState("Departments");
 
     const HandleBtnclick = (companyName) =>{
        setSelectButton(companyName);
        
     }
-     
     
     return(
         <div>
-        <h1 className="App-main-head">{SelectButton  }</h1>
+        <h1 className="App-main-head">{SelectButton}</h1>
+        
 
          {DepartmentDatas.map((item,index)=>{
             return ( 
