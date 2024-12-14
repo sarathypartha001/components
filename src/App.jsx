@@ -2,10 +2,10 @@ import Company from "./company/company";
 import "./index.css";
 import { DepartmentDatas } from "./dataset";
 import { useState } from "react";
+import Demo from "./demo";
 
 function App(){
     let [SelectButton, setSelectButton]= useState("Company Details");
-    let [departmentselectBtn, setdepartmentselectBtn] = useState("Departments");
 
     const HandleBtnclick = (companyName) =>{
        setSelectButton(companyName);
@@ -18,7 +18,7 @@ function App(){
         
 
          {DepartmentDatas.map((item,index)=>{
-            return ( 
+            return (
             <Company key={index}
             companyName= {item.companyName}
             details={item.details} 
@@ -27,16 +27,8 @@ function App(){
             />
             );
          })}
-         
-
-
-
-
-
-
-
-
-
+         <Demo 
+         Result = {SelectButton}/>
 
 
 
